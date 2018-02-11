@@ -70,8 +70,10 @@ class Database {
    */
   _resolve() {
     const { host, port, name, username, password } = this.dbConfig;
+    const message = `Connect database mongodb://${host}:${port}/${name} successfully!`;
 
-    GrobalTracer.info(`Connect database mongodb://${host}:${port}/${name} successfully!`);
+    GrobalTracer.info(message);
+    console.log(message);
   }
 
   /**
@@ -83,9 +85,15 @@ class Database {
    */
   _reject(error) {
     const { host, port, name, username, password } = this.dbConfig;
+    const message = `Connect database Error! Please check the connect string "mongodb://${host}:${port}/${name}"!`;
 
-    GrobalTracer.error(`Connect database Error! Please check the connect string "mongodb://${host}:${port}/${name}"!`);
+    GrobalTracer.error(message);
     GrobalTracer.error(error);
+
+    console.error(message);
+    console.error(error);
+
+    process.exit(0);
   }
 }
 

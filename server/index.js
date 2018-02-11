@@ -8,6 +8,7 @@ class Server extends Application {
     this.useLogger();
     this.useSession();
     this.useViewEngine();
+    this.useStaticResource();
     this.useRouter();
     this.useExtends();
     this.connectDB();

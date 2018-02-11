@@ -45,8 +45,8 @@ class Application extends Database {
   }
 
   useStaticResource() {
-    this.app.use('/public', express.static(path.join(__dirname, '../../../client/dist')));
-    this.app.use('/public', express.static(path.join(__dirname, '../../../uploads')));
+    this.app.use('/public', express.static(path.join(__dirname, '../../client/dist')));
+    this.app.use('/public', express.static(path.join(__dirname, '../../uploads')));
   }
 
   useBodyParser() {
@@ -55,7 +55,7 @@ class Application extends Database {
   }
 
   useViewEngine() {
-    this.app.set('views', path.join(__dirname, '../../client/views'));
+    this.app.set('views', path.join(__dirname, '../../client'));
     this.app.set('view engine', 'ejs');
   }
 
@@ -64,10 +64,10 @@ class Application extends Database {
     this.app.use(/^(?!\/api\/[\s\S]+)/, WebRouter);
   }
 
-  async useExtends() {
+  useExtends() {
     for(const name of this.extends) {
       try {
-        const { default: extendModule } = await import(`../Extends/${name}`);
+        const { default: extendModule } = require(`../Extends/${name}`);
         extendModule(this.app);
       } catch (e) {
         console.warn(`[Warning]: Extend application "${name}" is not existed.`);

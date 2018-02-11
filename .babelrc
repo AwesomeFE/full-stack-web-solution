@@ -4,7 +4,6 @@
     "stage-0"
   ],
   "plugins": [
-    "dynamic-import-node",
     "transform-class-properties",
     "transform-decorators-legacy"
   ]

@@ -1,0 +1,7 @@
+export vueLoader from './vueLoader'
+export babelLoader from './babelLoader'
+export cssLoader from './cssLoader'
+export scssLoader from './scssLoader'
+export lessLoader from './lessLoader'
+export imageLoader from './imageLoader'
+export fontLoader from './fontLoader'

@@ -1,4 +1,5 @@
 import http from 'http';
+import path from 'path';
 import express from 'express';
 import bodyParser from 'body-parser';
 import session from 'express-session';
@@ -56,6 +57,11 @@ class Application extends Database {
   useViewEngine() {
     this.app.set('views', path.join(__dirname, '../../client/views'));
     this.app.set('view engine', 'ejs');
+  }
+
+  useRouter() {
+    this.app.use(/^\/api/, ApiRouter);
+    this.app.use(/^(?!\/api\/[\s\S]+)/, WebRouter);
   }
 
   async useExtends() {

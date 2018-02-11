@@ -10,11 +10,12 @@ class UserRouter {
   };
 
   signIn = {
-    validate(req, res, next) {
-
+    validate(req, res) {
+      console.log('validate');
     },
-    handler(req, res, next) {
-
+    handler(req, res) {
+      console.log('handler');
+      res.json({ handler: 'handler' });
     }
   };
 }

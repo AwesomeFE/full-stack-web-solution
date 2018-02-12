@@ -98,6 +98,7 @@ This is an ES6 full stack web project template with Express and vuejs.
 - Run `npm run test`
 
 ## Todo:
+These features are WIP :construction:.
 - Create a demo shop/user app.
 - Remove babel-node server and using webpack dist for prd/staging.
 - Front client add weex project folder.

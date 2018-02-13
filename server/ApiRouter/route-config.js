@@ -3,5 +3,5 @@ import * as middlewares from './Middlewares';
 
 export default [
   middlewares.ensureSignIn,
-  { path: '/user/signin', method: 'get', ...UserRouter.signIn },
+  { path: '/user/signin', method: 'get', ...UserRouter.signIn }
 ];

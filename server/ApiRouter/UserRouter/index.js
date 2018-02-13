@@ -1,20 +1,42 @@
-class UserRouter {
+import BasicRouter from '../BasicRouter';
+import { UserController } from '../../Controllers';
+
+class UserRouter extends BasicRouter {
 
   signUp = {
-    validate(req, res, next) {
-
+    required: {
+      body: [
+        'password'
+      ]
     },
-    handler(req, res, next) {
 
+    validate: (req, res) => {
+      const { username, email, mobile } = req.body;
+
+      if(!username && !email && !mobile) {
+        throw this.messages.SIGNUP_INVALID;
+      }
+    },
+    handler: async (req, res) => {
+      await UserController.signIn();
     }
   };
 
   signIn = {
-    validate(req, res) {
-      console.log('validate');
+    // required: {
+    //   body: [
+    //     'password'
+    //   ],
+    //   query: [
+    //     'isLogin'
+    //   ]
+    // },
+
+    validate: (req, res) => {
     },
-    handler(req, res) {
-      console.log('handler');
+
+    handler: async (req, res) => {
+      console.log(await UserController.signIn());
       res.json({ handler: 'handler' });
     }
   };

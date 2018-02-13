@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 import session from 'express-session';
 
 import Logger from '../Services/Logger';
+import Message from '../Services/Message';
 import Database from '../Services/Database';
 
 import ApiRouter from '../ApiRouter';
@@ -62,6 +63,11 @@ class Application extends Database {
   useRouter() {
     this.app.use(/^\/api/, ApiRouter);
     this.app.use(/^(?!\/api\/[\s\S]+)/, WebRouter);
+  }
+
+  // Should last call to catch all Express Message
+  useMessageHandler() {
+    this.app.use(Message.handler);
   }
 
   useExtends() {

@@ -12,6 +12,7 @@ class Server extends Application {
     this.useRouter();
     this.useExtends();
     this.connectDB();
+    this.useMessageHandler();
     this.run();
   }
 }

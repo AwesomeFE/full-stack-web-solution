@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import Vue from 'vue';
 import Vuex from 'vuex';
 import VueI18n from 'vue-i18n';

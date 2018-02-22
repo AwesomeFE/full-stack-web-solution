@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import moment from 'moment';
 import VueI18n from 'vue-i18n';
 import VueRouter from 'vue-router';
 import VueValidate from 'vee-validate';
@@ -22,8 +21,6 @@ Vue.use(VueValidate);
 initService();
 initDirectives();
 initComponents();
-
-moment.locale('zh-cn');
 
 new Vue({
   i18n: i18n(),

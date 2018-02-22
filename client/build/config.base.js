@@ -10,10 +10,12 @@ export default (options) => {
     vendor
   } = options;
 
+  const vendorEntry = vendor ? { vendor } : {};
+
   return {
     entry: {
       app: `./client/src/${appName}/main.js`,
-      vendor
+      ...vendor
     },
     output: {
       path: path.join(__dirname, `../dist/${appName}/`),

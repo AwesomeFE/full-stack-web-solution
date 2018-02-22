@@ -12,11 +12,11 @@ function userHandler(req, res, next) {
   const ua = new UA(req.headers['user-agent']);
 
   if(ua.getDevice().type === 'mobile') {
-    res.set({'ETag': `Mobile v${strings.WEB_VERSION}`});
+    // res.set({'ETag': `Mobile v${strings.WEB_VERSION}`});
     res.sendFile(path.join(__dirname, '../../client/dist/mobile/index.html'));
 
   } else {
-    res.set({'ETag': `Web v${strings.WEB_VERSION}`});
+    // res.set({'ETag': `Web v${strings.WEB_VERSION}`});
     res.sendFile(path.join(__dirname, '../../client/dist/pc/index.html'));
   }
 }

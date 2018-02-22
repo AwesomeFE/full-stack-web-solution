@@ -7,21 +7,10 @@ export default [
     extract: true,
     minimize: true,
     sourceMap: false,
+    // Dynamic import modules should be declared.
+    // Link: https://github.com/webpack/webpack/issues/4360
     vendor: [
-      'vue',
-      'vuex',
-      'vue-i18n',
-      'vue-router',
-      'vee-validate',
-      'vue-class-component',
-      'mqtt/dist/mqtt',
-      'axios',
-      'swiper/dist/js/swiper.js',
-      'moment',
-      'validator',
-      'babel-polyfill',
-      'perfect-scrollbar',
-      'ua-parser-js'
+      'vue-property-decorator'
     ]
   }),
   webpackTask({
@@ -30,22 +19,10 @@ export default [
     extract: true,
     minimize: true,
     sourceMap: false,
+    // Dynamic import modules should be declared.
+    // Link: https://github.com/webpack/webpack/issues/4360
     vendor: [
-      'vue',
-      'vuex',
-      'vue-i18n',
-      'vue-router',
-      'vee-validate',
-      'vue-class-component',
-      'vue-property-decorator',
-      'mqtt/dist/mqtt',
-      'axios',
-      'swiper/dist/js/swiper.js',
-      'validator',
-      'babel-polyfill',
-      'perfect-scrollbar',
-      'moment',
-      'ua-parser-js'
+      'vue-property-decorator'
     ]
   }),
   webpackTask({
@@ -54,22 +31,10 @@ export default [
     extract: true,
     minimize: true,
     sourceMap: false,
+    // Dynamic import modules should be declared.
+    // Link: https://github.com/webpack/webpack/issues/4360
     vendor: [
-      'vue',
-      'vuex',
-      'vue-i18n',
-      'vue-router',
-      'vee-validate',
-      'vue-class-component',
-      'vue-property-decorator',
-      'mqtt/dist/mqtt',
-      'axios',
-      'swiper/dist/js/swiper.js',
-      'validator',
-      'babel-polyfill',
-      'perfect-scrollbar',
-      'moment',
-      'ua-parser-js'
+      'vue-property-decorator'
     ]
   })
 ]

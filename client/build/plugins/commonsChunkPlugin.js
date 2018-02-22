@@ -3,7 +3,7 @@ import webpack from 'webpack';
 export function commonsChunkPlugin() {
   return [
     new webpack.optimize.CommonsChunkPlugin({
-      names: 'vendor',
+      name: 'vendor',
       minChunks(module) {
         return module.context && module.context.includes('node_modules');
       }

@@ -15,7 +15,7 @@ export default (options) => {
   return {
     entry: {
       app: `./client/src/${appName}/main.js`,
-      ...vendor
+      ...vendorEntry
     },
     output: {
       path: path.join(__dirname, `../dist/${appName}/`),

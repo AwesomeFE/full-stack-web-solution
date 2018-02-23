@@ -1,6 +1,6 @@
 <template>
-  <div class="Home">
-    PC
+  <div class="PageFooter">
+    PageFooter
   </div>
 </template>
 
@@ -9,15 +9,14 @@ import Vue from '../../commons/BasicVue';
 import { Component } from 'vue-property-decorator';
 
 @Component()
-class Home extends Vue {
-
+class PageFooter extends Vue {
+  
 }
 
-export default Home;
+export default PageFooter;
 </script>
 
 <style type="text/scss" lang="scss">
-.Home {
-
+.PageFooter {
 }
 </style>

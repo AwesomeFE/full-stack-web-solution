@@ -1,6 +1,6 @@
 <template>
-  <div class="Home">
-    PC
+  <div class="FormSignUp">
+    FormSignUp
   </div>
 </template>
 
@@ -9,15 +9,14 @@ import Vue from '../../commons/BasicVue';
 import { Component } from 'vue-property-decorator';
 
 @Component()
-class Home extends Vue {
-
+class FormSignUp extends Vue {
+  
 }
 
-export default Home;
+export default FormSignUp;
 </script>
 
 <style type="text/scss" lang="scss">
-.Home {
-
+.FormSignUp {
 }
 </style>

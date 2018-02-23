@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Vue from 'vue';
+import Vue from '../../commons/BasicVue';
 import PageHeader from '../../components/PageHeader';
 import { Component } from 'vue-property-decorator';
 

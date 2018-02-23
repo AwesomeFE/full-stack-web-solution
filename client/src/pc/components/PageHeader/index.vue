@@ -1,25 +1,25 @@
 <template>
   <div class="PageHeader">
     <div class="PageHeader__logo">
-      <router-link to="/">{{$t('LOGO')}}</router-link>
+      <router-link :to="linkUrls.HOME">{{$t('LOGO')}}</router-link>
     </div>
     <div class="PageHeader__body">
       <div class="left">
         <span>icon</span>
       </div>
       <div class="right">
-        <router-link class="menu" to="/">{{$t('CART')}}</router-link>
-        <router-link class="menu" to="/signin">{{$t('SIGNIN')}}</router-link>
-        <router-link class="menu" to="/signup">{{$t('SIGNUP')}}</router-link>
+        <router-link class="menu" :to="linkUrls.CART">{{$t('CART')}}</router-link>
+        <router-link class="menu" :to="linkUrls.SIGNIN">{{$t('SIGNIN')}}</router-link>
+        <router-link class="menu" :to="linkUrls.SIGNUP">{{$t('SIGNUP')}}</router-link>
         <a class="menu">{{$t('ACCOUNT')}}</a>
-        <router-link class="menu" to="/signout">{{$t('SIGNOUT')}}</router-link>
+        <router-link class="menu" :to="linkUrls.SIGNOUT">{{$t('SIGNOUT')}}</router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
+import Vue from '../../commons/BasicVue';
 import { Component } from 'vue-property-decorator';
 
 @Component({

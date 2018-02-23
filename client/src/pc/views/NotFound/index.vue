@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Vue from 'vue';
+import Vue from '../../commons/BasicVue';
 import { Component } from 'vue-property-decorator';
 
 @Component()

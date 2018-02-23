@@ -1,18 +1,23 @@
 <template>
   <div class="App">
     <PageHeader></PageHeader>
-    <router-view></router-view>
+    <div class="PageBody">
+      <router-view></router-view>
+    </div>
+    <PageFooter></PageFooter>
   </div>
 </template>
 
 <script>
 import Vue from '../../commons/BasicVue';
 import PageHeader from '../../components/PageHeader';
+import PageFooter from '../../components/PageFooter';
 import { Component } from 'vue-property-decorator';
 
 @Component({
   components: {
-    PageHeader
+    PageHeader,
+    PageFooter
   }
 })
 class App extends Vue {
@@ -27,7 +32,10 @@ export default App;
 <style type="text/scss" lang="scss">
 .App {
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 750px;
   position: relative;
+  .PageBody {
+    min-height: calc(100vh - 50px - 100px);
+  }
 }
 </style>

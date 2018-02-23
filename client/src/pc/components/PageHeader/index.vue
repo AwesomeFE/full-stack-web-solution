@@ -33,12 +33,12 @@ export default PageHeader;
 </script>
 
 <style type="text/scss" lang="scss">
-$header-height: 50px;
+@import '../../assets/scss/variable.scss';
 
 .PageHeader {
   height: $header-height;
   background: #ccc;
-  padding: 0 10px;
+  padding: 0 $page-padding-value;
   .PageHeader__logo {
     float: left;
     height: 100%;

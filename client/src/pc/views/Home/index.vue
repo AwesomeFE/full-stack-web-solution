@@ -1,6 +1,6 @@
 <template>
   <div class="Home">
-    PC
+    <div>PC</div>
   </div>
 </template>
 

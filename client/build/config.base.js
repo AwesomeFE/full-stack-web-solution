@@ -15,6 +15,7 @@ export default (options) => {
   return {
     entry: {
       app: `./client/src/${appName}/main.js`,
+      importSW: `./client/src/${appName}/sw.js`,
       ...vendorEntry
     },
     output: {
@@ -67,11 +68,13 @@ export default (options) => {
     plugins: [
       ...plugins.cleanPlugin(options),
       ...plugins.definePlugin(options),
+      ...plugins.workboxPlugin(options),
       ...plugins.uglifyJsPlugin(options),
       ...plugins.extractTextPlugin(options),
       ...plugins.htmlWebpackPlugin(options),
       ...plugins.commonsChunkPlugin(options),
-      ...plugins.hotModuleReplacementPlugin(options),
+      ...plugins.htmlIncludeAssetsPlugin(options),
+      ...plugins.hotModuleReplacementPlugin(options)
     ],
     devtool: sourceMap ? 'source-map' : undefined
   }

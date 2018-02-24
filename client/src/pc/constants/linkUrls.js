@@ -1,6 +1,6 @@
 export const linkUrls = {
   HOME: {
-    path: ''
+    path: '/'
   },
   CART: {
     path: 'cart'

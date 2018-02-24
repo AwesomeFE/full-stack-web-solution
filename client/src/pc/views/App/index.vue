@@ -30,12 +30,15 @@ export default App;
 </script>
 
 <style type="text/scss" lang="scss">
+@import '../../assets/scss/variable.scss';
+
 .App {
   min-height: 100vh;
   min-width: 750px;
   position: relative;
   .PageBody {
-    min-height: calc(100vh - 50px - 100px);
+    min-height: $page-min-height;
+    padding-bottom: $footer-height;
   }
 }
 </style>

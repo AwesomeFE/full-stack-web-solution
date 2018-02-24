@@ -1,6 +1,10 @@
 <template>
   <div class="Entry">
-    Entry
+    <div class="Entry__boardcast">Here is Ad.</div>
+    <div class="Entry__form">
+      <FormSignIn v-show="isSignIn"></FormSignIn>
+      <FormSignUp v-show="isSignUp"></FormSignUp>
+    </div>
   </div>
 </template>
 
@@ -15,7 +19,13 @@ import { Component } from 'vue-property-decorator';
   }
 })
 class Entry extends Vue {
-  
+  get isSignIn() {
+    return this.$route.query.type === 'signin';
+  }
+
+  get isSignUp() {
+    return this.$route.query.type === 'signup';
+  }
 }
 
 export default Entry;
@@ -23,5 +33,13 @@ export default Entry;
 
 <style type="text/scss" lang="scss">
 .Entry {
+  .Entry__boardcast {
+    float: left;
+    width: 50%;
+    height: 100%;
+  }
+  .Entry__form {
+    margin-left: 50%;
+  }
 }
 </style>

@@ -5,3 +5,5 @@ $header-height: 50px;
 
 $footer-color: #999;
 $footer-height: 100px;
+
+$page-min-height: calc(100vh - #{$header-height} - #{$footer-height});

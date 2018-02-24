@@ -5,7 +5,7 @@ export function extractTextPlugin(options) {
   const plugin = [];
 
   if(extract) {
-    plugin.push(new ExtractTextPlugin(`stylesheets/app${chunkHash}.css`))
+    plugin.push(new ExtractTextPlugin(`stylesheets/app${chunkHash}.css`));
   }
 
   return plugin;

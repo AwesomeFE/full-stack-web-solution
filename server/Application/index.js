@@ -81,6 +81,13 @@ class Application extends Database {
     }
   }
 
+  useServiceWorker() {
+    this.app.use((req, res, next) => {
+      res.set('Service-Worker-Allowed', '/');
+      next();
+    });
+  }
+
   run() {
     this.server.listen(this.port, this.host);
   }

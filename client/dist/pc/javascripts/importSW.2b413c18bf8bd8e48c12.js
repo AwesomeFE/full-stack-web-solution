@@ -1,1 +1,0 @@
-webpackJsonp([6],{388:function(e,i,n){"use strict";if("serviceWorker"in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/public/pc/sw.js").then(function(e){console.log("SW registered: ",e)}).catch(function(e){console.log("SW registration failed: ",e)})})}}},[388]);

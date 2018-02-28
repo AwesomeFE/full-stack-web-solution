@@ -13,11 +13,23 @@ function userHandler(req, res, next) {
 
   if(ua.getDevice().type === 'mobile') {
     // res.set({'ETag': `Mobile v${strings.WEB_VERSION}`});
-    res.sendFile(path.join(__dirname, '../../client/dist/mobile/index.html'));
+    // res.set({'Content-Type': 'text/html; charset=UTF-8'});
+    // res.set({'Date': 'Wed, 28 Feb 2018 08:30:29 GMT'});
+    var options = {
+      root: path.join(__dirname, '../../client/dist/mobile/')
+    };
+    
+    res.sendFile('index.html', options);
 
   } else {
     // res.set({'ETag': `Web v${strings.WEB_VERSION}`});
-    res.sendFile(path.join(__dirname, '../../client/dist/pc/index.html'));
+    // res.set({'Content-Type': 'text/html; charset=UTF-8'});
+    // res.set({'Date': 'Wed, 28 Feb 2018 08:30:29 GMT'});
+    var options = {
+      root: path.join(__dirname, '../../client/dist/pc/')
+    };
+    
+    res.sendFile('index.html', options);
   }
 }
 

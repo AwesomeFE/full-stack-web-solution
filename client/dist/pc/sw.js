@@ -20,50 +20,50 @@ importScripts('workbox-sw.prod.v2.1.2.js');
 const fileManifest = [
   {
     "url": "index.html",
-    "revision": "98419f08e109c0742b1a1047069da9b9"
+    "revision": "26084f5c427fc96c4ae7b8905ee0fbad"
   },
   {
-    "url": "/public/pc/javascripts/0.b5c545e03b0effe8b033.js",
+    "url": "/public/pc/javascripts/0.js",
     "revision": "ba062606c4ef13e05528ba7c52d0a2ae"
   },
   {
-    "url": "/public/pc/javascripts/1.0ad1075f0ab46dd593c8.js",
+    "url": "/public/pc/javascripts/1.js",
     "revision": "d17c398b3f62025c2adee0efad7f28b8"
   },
   {
-    "url": "/public/pc/javascripts/2.dfba896f9d74261495ff.js",
+    "url": "/public/pc/javascripts/2.js",
     "revision": "c9bcac6e7eeb4b30742fe8ebbf1be620"
   },
   {
-    "url": "/public/pc/javascripts/3.44250f11a7cc1e7bf50e.js",
+    "url": "/public/pc/javascripts/3.js",
     "revision": "c7afecc4caeb2f43e550d108005c80a0"
   },
   {
-    "url": "/public/pc/javascripts/7.0f0bbb6938b7ec9e9add.js",
+    "url": "/public/pc/javascripts/7.js",
     "revision": "f78604d5b2f64fd1794bb0de2065febf"
   },
   {
-    "url": "/public/pc/javascripts/8.cfbdd9ecebc99a8d7eba.js",
+    "url": "/public/pc/javascripts/8.js",
     "revision": "8a66a145b965c536752f534587d1272d"
   },
   {
-    "url": "/public/pc/javascripts/app.9d423840d81162c7778f.js",
+    "url": "/public/pc/javascripts/app.js",
     "revision": "2fbb302c73e511d18e1a1f5e0e9b29f1"
   },
   {
-    "url": "/public/pc/javascripts/importSW.b703f7f5f883ef62a67a.js",
+    "url": "/public/pc/javascripts/importSW.js",
     "revision": "a601a54a57f88ccc0e13c8237c4b5403"
   },
   {
-    "url": "/public/pc/javascripts/manifest.9f3e8af507868b44858a.js",
-    "revision": "2b038885b3a6bed846611616a8a02f2b"
+    "url": "/public/pc/javascripts/manifest.js",
+    "revision": "1a103f5d900760c3202f8842809f5c39"
   },
   {
-    "url": "/public/pc/javascripts/vendor.9ccf14a6972ea5aa1039.js",
+    "url": "/public/pc/javascripts/vendor.js",
     "revision": "68c2aabd211d3ff4cf9c8739679b7125"
   },
   {
-    "url": "/public/pc/stylesheets/app.9d423840d81162c7778f.css",
+    "url": "/public/pc/stylesheets/app.css",
     "revision": "f03a5e31d8ba5974186426c5a08d85f4"
   }
 ];

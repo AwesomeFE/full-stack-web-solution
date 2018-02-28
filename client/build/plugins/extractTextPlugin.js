@@ -1,7 +1,7 @@
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 export function extractTextPlugin(options) {
-  const { extract, chunkHash } = options;
+  const { extract, chunkHash = '' } = options;
   const plugin = [];
 
   if(extract) {

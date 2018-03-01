@@ -2,8 +2,10 @@ import Vue from 'vue';
 import axios from 'axios';
 
 /**
- * 重定义服务器响应成功逻辑
+ * Redefine server response success process
+ * @name responseSuccess
  * @param {*} response 
+ * @returns {Promise.reject|Object} result
  */
 const responseSuccess = response => {
   // 获取response的code
@@ -14,7 +16,7 @@ const responseSuccess = response => {
     ? Promise.reject(response.data)
     // 成功则返回数据
     : response.data;
-}
+};
 
 /**
  * 重定义服务器响应失败逻辑
@@ -28,7 +30,7 @@ const responseFailed = error => {
     : alert('服务器响应错误，请联系管理员');
 
   return Promise.reject(error);
-}
+};
 
 export default () => {
   axios.interceptors.response.use(responseSuccess, responseFailed);
@@ -36,4 +38,6 @@ export default () => {
   Vue.config.errorHandler = (error, vm, info) => {
     console.log(error)
   };
-}
+};
+
+export * from './user';

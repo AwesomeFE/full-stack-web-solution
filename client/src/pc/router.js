@@ -13,6 +13,10 @@ export default () => new VueRouter({
           component: () => import('./views/Home')
         },
         {
+          path: 'entry',
+          component: () => import('./views/Entry')
+        },
+        {
           path: '*',
           component: () => import('./views/NotFound')
         }

@@ -67,11 +67,15 @@ export default (options) => {
     plugins: [
       ...plugins.cleanPlugin(options),
       ...plugins.definePlugin(options),
+      ...plugins.workboxPlugin(options),
       ...plugins.uglifyJsPlugin(options),
+      ...plugins.copyWebpackPlugin(options),
       ...plugins.extractTextPlugin(options),
       ...plugins.htmlWebpackPlugin(options),
       ...plugins.commonsChunkPlugin(options),
-      ...plugins.hotModuleReplacementPlugin(options),
+      ...plugins.writeFileWebpackPlugin(options),
+      ...plugins.htmlIncludeAssetsPlugin(options),
+      ...plugins.hotModuleReplacementPlugin(options)
     ],
     devtool: sourceMap ? 'source-map' : undefined
   }

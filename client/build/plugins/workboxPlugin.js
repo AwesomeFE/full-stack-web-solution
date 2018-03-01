@@ -7,6 +7,11 @@ export function workboxPlugin(options) {
 
   if(useServiceWorker) {
     plugin.push(new WorkboxPlugin({
+      swSrc: `./client/src/${appName}/sw/index.js`,
+      swDest: `./client/dist/${appName}/javascripts/sw.js`,
+      templatedUrls: {
+        '/': 'index.html'
+      },
       clientsClaim: true,
       skipWaiting: true
     }));

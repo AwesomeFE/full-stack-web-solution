@@ -1,1 +1,0 @@
-webpackJsonp([5],{378:function(e,i,o){"use strict";if("serviceWorker"in navigator){navigator.serviceWorker.register("/public/admin/sw.js",{scope:"/"}).then(function(e){console.log("SW registered: ",e)}).catch(function(e){console.log("SW registration failed: ",e)})}}},[378]);

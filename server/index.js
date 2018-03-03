@@ -7,6 +7,7 @@ class Server extends Application {
 
     this.useLogger();
     this.useSession();
+    this.useBodyParser();
     this.useViewEngine();
     this.useServiceWorker();
     this.useStaticResource();

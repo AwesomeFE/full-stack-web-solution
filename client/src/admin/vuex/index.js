@@ -1,13 +1,10 @@
 import Vuex from 'vuex';
-import { state, actions, getters, mutations } from './root';
+import { CommonStore } from '../../common';
 
-export default () => new Vuex.Store({
-  state,
-  mutations,
-  actions,
-  getters,
-  strict: process.env.NODE_ENV !== 'production',
-
-  modules: {
+class Store extends CommonStore {
+  constructor(options) {
+    super(options);
   }
-})
+}
+
+export default () => new Vuex.Store(new Store());

@@ -3,10 +3,10 @@ import webpackTask from './config.base'
 export default [
   webpackTask({
     appName: 'admin',
-    chunkHash: '.[chunkhash]',
     extract: false,
     minimize: false,
     sourceMap: true,
+    useServiceWorker: true,
     // Dynamic import modules should be declared.
     // Link: https://github.com/webpack/webpack/issues/4360
     vendor: [
@@ -15,10 +15,10 @@ export default [
   }),
   webpackTask({
     appName: 'mobile',
-    chunkHash: '.[chunkhash]',
     extract: false,
     minimize: false,
     sourceMap: true,
+    useServiceWorker: true,
     // Dynamic import modules should be declared.
     // Link: https://github.com/webpack/webpack/issues/4360
     vendor: [
@@ -27,10 +27,10 @@ export default [
   }),
   webpackTask({
     appName: 'pc',
-    chunkHash: '.[chunkhash]',
     extract: false,
     minimize: false,
     sourceMap: true,
+    useServiceWorker: true,
     // Dynamic import modules should be declared.
     // Link: https://github.com/webpack/webpack/issues/4360
     vendor: [

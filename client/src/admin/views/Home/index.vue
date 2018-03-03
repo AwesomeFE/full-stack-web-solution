@@ -1,11 +1,11 @@
 <template>
   <div class="Home">
-    Home
+    <div>PC</div>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
+import { Vue } from '../../common';
 import { Component } from 'vue-property-decorator';
 
 @Component()

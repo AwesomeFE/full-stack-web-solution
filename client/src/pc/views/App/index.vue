@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Vue from '../../commons/BasicVue';
+import { Vue } from '../../common';
 import PageHeader from '../../components/PageHeader';
 import PageFooter from '../../components/PageFooter';
 import { Component } from 'vue-property-decorator';

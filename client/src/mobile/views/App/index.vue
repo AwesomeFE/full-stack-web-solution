@@ -1,25 +1,44 @@
 <template>
   <div class="App">
-    <router-link to="/">Home</router-link>
-    <router-link to="/notFound">NotFound</router-link>
-    <router-view></router-view>
+    <PageHeader></PageHeader>
+    <div class="PageBody">
+      <router-view></router-view>
+    </div>
+    <PageFooter></PageFooter>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
+import { Vue } from '../../common';
+import PageHeader from '../../components/PageHeader';
+import PageFooter from '../../components/PageFooter';
 import { Component } from 'vue-property-decorator';
 
-@Component()
+@Component({
+  components: {
+    PageHeader,
+    PageFooter
+  }
+})
 class App extends Vue {
-
+  async mounted() {
+    await this.$store.dispatch('preLogin');
+  }
 }
 
 export default App;
 </script>
 
 <style type="text/scss" lang="scss">
-.App {
+@import '../../assets/scss/variable.scss';
 
+.App {
+  min-height: 100vh;
+  min-width: 750px;
+  position: relative;
+  .PageBody {
+    min-height: $page-min-height;
+    padding-bottom: $footer-height;
+  }
 }
 </style>

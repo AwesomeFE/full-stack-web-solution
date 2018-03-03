@@ -1,5 +1,5 @@
 import BasicRouter from '../BasicRouter';
-import { UserController } from '../../Controllers';
+import { UserController, EntryController } from '../../Controllers';
 
 class UserRouter extends BasicRouter {
 
@@ -18,26 +18,30 @@ class UserRouter extends BasicRouter {
       }
     },
     handler: async (req, res) => {
-      await UserController.signIn();
+      const { messages } = this;
+      const user = await UserController.signUp(req.body);
+
+      res.json(messages.REQUEST_SUCCESS(user));
     }
   };
 
   signIn = {
-    // required: {
-    //   body: [
-    //     'password'
-    //   ],
-    //   query: [
-    //     'isLogin'
-    //   ]
-    // },
+    required: {
+      body: [
+        'password'
+      ]
+    },
 
     validate: (req, res) => {
     },
 
     handler: async (req, res) => {
-      console.log(await UserController.signIn());
-      res.json({ handler: 'handler' });
+      const { messages } = this;
+
+      const user = await UserController.signIn(req.body);
+      await EntryController.log(req.ip, user);
+
+      res.json(messages.REQUEST_SUCCESS(user));
     }
   };
 }

@@ -1,0 +1,1 @@
+export { Vue } from './Vue';

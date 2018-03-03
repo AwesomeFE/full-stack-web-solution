@@ -3,7 +3,6 @@ import webpackTask from './config.base';
 export default [
   webpackTask({
     appName: 'admin',
-    chunkHash: '',
     extract: false,
     minimize: false,
     sourceMap: true,
@@ -16,7 +15,6 @@ export default [
   }),
   webpackTask({
     appName: 'mobile',
-    chunkHash: '',
     extract: false,
     minimize: false,
     sourceMap: true,
@@ -29,7 +27,6 @@ export default [
   }),
   webpackTask({
     appName: 'pc',
-    chunkHash: '',
     extract: false,
     minimize: false,
     sourceMap: true,

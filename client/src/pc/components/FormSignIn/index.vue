@@ -39,15 +39,16 @@ class FormSignIn extends Vue {
 
   async handleSubmit() {
     const isFormValid = await this.$validator.validateAll();
+    const position = await this.getGeolocation();
 
     if(isFormValid) {
-      try {
-        this.disableFrom();
-        await this.$store.dispatch('user/signin', this.formData);
+      // try {
+      //   this.disableFrom();
+      //   await this.$store.dispatch('user/signin', this.formData);
 
-      } catch(e) {
-        this.enableFrom();
-      }
+      // } catch(e) {
+      //   this.enableFrom();
+      // }
     }
   }
 
